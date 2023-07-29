@@ -1,1 +1,27 @@
-<h1>Test</h1>
+<section class="main-section">
+  <h1>GameBoy manual search</h1>
+
+  <p>Search the scanned OCR text of hundreds of GameBoy manuals.</p>
+
+  <p style="margin-bottom: 25px;">
+    Manuals source: <a href="https://www.sprintinglegs.com/gbdb/manuals/">sprintinglegs.com/gbdb/manuals</a>
+  </p>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Search</mat-label>
+    <input matInput [(ngModel)]="query" (ngModelChange)="queryUpdate($event)">
+  </mat-form-field>
+
+  <p>Found {{results.length}} results:</p>
+
+  <div *ngFor="let result of results" class="result-container">
+    <div class="result-name">
+      {{result.gameName}}
+    </div>
+    <div class="occurrence-container">
+      <div *ngFor="let occurrence of result.occurrences">
+        {{occurrence}}
+      </div>
+    </div>
+  </div>
+</section>

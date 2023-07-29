@@ -1,0 +1,21 @@
+
+.main-section {
+  margin: 20px;
+
+  .result-container {
+    display: flex;
+    border: 1px grey solid;
+    padding: 5px;
+
+    .result-name {
+      text-transform: uppercase;
+      margin-right: 20px;
+      font-weight: 500;
+    }
+
+    .occurrence-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
